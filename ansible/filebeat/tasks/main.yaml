@@ -1,0 +1,36 @@
+# Playbook for install filebeat
+
+- name: "Загрузка Filebeat"
+  get_url:
+    url=https://mirror.yandex.ru/mirrors/elastic/7/pool/main/f/filebeat/filebeat-7.17.9-amd64.deb
+    dest=/home/denis/
+
+- name: "Установка Filebeat"
+  command:
+    dpkg -i /home/denis/filebeat-7.17.9-amd64.deb
+
+- name: "Systemctl daemon reload"
+  systemd:
+    daemon_reload: true
+
+- name: "Стартуем Filebeat"
+  service:
+    name=filebeat
+    enabled=yes
+    state=started
+
+- name: "Меняем файл /etc/filebeat/filebeat.yml"
+  copy:
+    src=/home/denis/ansible/filebeat/filebeat.yml
+    dest=/etc/filebeat/filebeat.yml
+    mode=0644
+    owner=root
+    group=root
+
+- name: "Restart filebeat"
+  systemd:
+    name=filebeat
+    state=restarted
+
+
+

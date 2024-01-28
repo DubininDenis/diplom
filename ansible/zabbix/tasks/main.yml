@@ -1,0 +1,73 @@
+# tasks file zabbix
+- name: "Установка postgresql"
+  apt:
+    name=postgresql
+    state=present
+- name: "Загрузка репозитория Zabbix"
+  get_url:
+    url=https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
+    dest=/home/denis
+- name: "Установка репозитория Zabbix"
+  become_method: sudo
+  command:
+    dpkg -i /home/denis/zabbix-release_6.0-4+ubuntu22.04_all.deb
+- name: "Apt update"
+  become_method: sudo
+  command:
+    apt update
+- name: "Установка zabbix-server-pgsql"
+  apt:
+    name=zabbix-server-pgsql
+    state=present
+- name: "Установка zabbix-frontend-php"
+  apt:
+    name=zabbix-frontend-php
+    state=present
+- name: "Установка php8.1-pgsql"
+  apt:
+    name=php8.1-pgsql
+    state=present
+- name: "Установка zabbix-apache-conf"
+  apt:
+    name=zabbix-apache-conf
+    state=present
+- name: "Установка zabbix-sql-scripts"
+  apt:
+    name=zabbix-sql-scripts
+    state=present
+- name: "Создаем пользователя БД"
+  become_method: sudo
+  command:
+    su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'12345678\'';"'
+- name: "Создаем базу данных"
+  become_method: sudo
+  command:
+    su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
+- name: "Создаем начальную схему и данные"
+  raw:
+    zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+- name: "Редактируем файл /etc/zabbix/zabbix_server.conf"
+  raw:
+    sed -i 's/# DBPassword=/DBPassword=12345678/g' /etc/zabbix/zabbix_server.conf
+- name: "Рестартуем zabbix-server"
+  service:
+    name=zabbix-server
+    state=restarted
+    enabled=yes
+- name: "Рестартуем zabbix-agent"
+  service:
+    name=zabbix-agent
+    state=restarted
+    enabled=yes
+- name: "Рестартуем apache2"
+  service:
+    name=apache2
+    state=restarted
+    enabled=yes
+- name: "Рестартуем php"
+  become_method: sudo
+  service:
+    name=php8.1-fpm
+    state=restarted
+    enabled=yes
+

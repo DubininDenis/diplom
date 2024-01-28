@@ -1,0 +1,12 @@
+#cloud-config
+users:
+  - name: denis
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAA........................30EbxpmlUKSqN6xh74ogAX97UjAvjv46Y28eGEwdSsMOYlGuvIC1HrhB7T8puF1O0UG/CCxunSLLc4IfxeUh34895VqcFkcbhexAu4CFWWH7zCf4tBwnOdh45g6bVzA8BPfiUY+9KbkaTjqb7ZwDF69yKfQHn3qT9eRAFe6LXhp4IuCkNiKPnZqDviU7KpajXLN7kHymBj3jqJewjljfEdWxeeRKtCAl302Y/lACgiCK6iErs2NHDJlxKM1JfIbg76oTFJ6yoBfV0EZKot/CbSNNrp3H3WL20UMJUOvG+yBhMn0nOE59zqdzwJb0hnn1N5ACvYvkxPKQ7TaV/dSsMCzg+iP/l1SEHAsyZvn1rtlPBQrWdaHImCaVM6jigvfQwpXmI9ZKDjTCu4ru7gN8pMxGI+c= user@Workstation
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAB........................sz5dmz5DfDc0UGZWqyNF0QexYd7LR3GpFhgs9ThnVW/HTMyOK/q8OK6ssfDK6SVuzhw9vvrH052UiyVbP1HoaydF9b7yoxXZ3cup44RbC45Agf8mtNDChOi2GM2BYPR3DnWP25m2/02X3rmFvs/70e+yKK2KGs7HDIKSGhFynFpvcnR40PLxpM8YVvaZch6SSZktHhxMig3vIkFAsjgtdEI0P6PBS0YiT46cJYqETcS6zc37+eeABdxNfyjXRPaSude5rZ0GFCIMJC4syzGu4fborQsMmbYFIM6pPsrkXX+kentK6fmt676Z9sRLcbWjzZQGmCShoxQulICjJJVdEQnjNJI2SMaSyZZQ0eVnhtlCZfo5ZdWHdB2osuHui47YH8aaqKkbZauMAJvgexxFbGVZfZkOTGG3AcPZQeZrEBFeThhV0d6A70= denkulibin@Workstation
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAB.........................MDtCwib92mz9otF2ly72gDH+ezGig6wsh//mB0ZqgZoOZznd90GcX6OqnmgFybKyQFp4vk6upaOHuaNYXFXEnMm6YLlnieMKizJQNoRVp0cchEHfDwnqHgz3+a4ClWGeX/v3RHfquDON/s26fmhkOe5QLkRjqop7mt9bpx4I/mS9Wx0Y0nHu8JFatjBrpTjmnwHmOVm0K7lf/w6gRMhl2EhHwmnK+Z3KvQSj8jRPcft61i3CYGAhFsQyQVrB731wm5whjLhNcgqIkpw1g2Rzq7pnrKiq6zTnoY+lqv8QgTgrL4SZ2Jsvw0cqcIwC1vxJZRihrdF9aXNKot5oAMBzXh1k2EXjPvCYwzf5s4cBfyptb07FX1DtwnpldTulpZyC7b9EtIiyo/JSP5XjHRjNtjoPbCxbHHqAEVsFVNmQsGiLbWIQ8auqsPUm/bk= denis@bastion-host
+      

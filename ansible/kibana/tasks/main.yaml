@@ -1,0 +1,34 @@
+ # playbook for install kibana
+
+- name: "Загрузка Kibana"
+  get_url:
+    url=https://mirror.yandex.ru/mirrors/elastic/7/pool/main/k/kibana/kibana-7.17.9-amd64.deb
+    dest=/home/denis/
+
+- name: "Установка Kibana"
+  command:
+    dpkg -i /home/denis/kibana-7.17.9-amd64.deb
+
+- name: "Systemctl daemon reload"
+  systemd:
+    daemon_reload: true
+
+- name: "Стартуем kibana"
+  service:
+    name=kibana
+    enabled=yes
+    state=started
+
+- name: "Меняем файл /etc/kibana/kibana.yml"
+  copy:
+    src=/home/denis/ansible/kibana/kibana.yml
+    dest=/etc/kibana/kibana.yml
+    mode=0644
+    owner=root
+    group=kibana
+
+- name: "Restart Kibana"
+  systemd:
+    name=kibana
+    state=restarted
+

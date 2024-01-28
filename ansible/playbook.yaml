@@ -1,0 +1,87 @@
+---
+- name: "install nginx"
+  hosts: webservers
+  become: true
+  become_method: sudo
+  tasks:
+  - name: "installed nginx"
+    apt:
+      name: nginx
+      state: present
+  - name: "Start nginx and Enable it on every boot"
+    service:
+      name: nginx
+      state: started
+      enabled: yes
+
+- name: "Copy index from Local to SERVER1"
+  hosts: server1
+  become: true
+  become_method: sudo
+  tasks:
+  - name: "Copy index"
+    copy:
+      src: ./index.nginx-server1.html
+      dest: /var/www/html/index.nginx-debian.html
+      backup: yes
+
+- name: "Copy index from Local to SERVER2"
+  hosts: server2
+  become: true
+  become_method: sudo
+  tasks:
+  - name: "Copy index"
+    copy:
+      src: ./index.nginx-server2.html
+      dest: /var/www/html/index.nginx-debian.html
+      backup: yes
+
+- name: "install zabbix agent"
+  hosts: webservers, elastic, kibana, zabbix_server
+  become: true
+  become_method: sudo
+  tasks:
+  - name: "installed zabix agent"
+    apt:
+      name: zabbix-agent
+      state: present
+  - name: "Редактируем файл /etc/zabbix/zabbix_agentd.conf"
+    raw:
+      sed -i 's/Server=127.0.0.1/Server=127.0.0.1, zabbix-server.ru-central1.internal/g' /etc/zabbix/zabbix_agentd.conf
+  - name: "Start zabbix agent and Enable it on every boot"
+    service:
+      name: zabbix-agent
+      state: restarted
+      enabled: yes
+
+- name: "install zabbix"
+  hosts: zabbix_server
+  become: true
+  become_method: sudo
+  roles:
+  - zabbix
+
+- name: "install elasticsearch"
+  hosts: elastic
+  become: true
+  become_method: sudo
+  roles:
+  - elastic
+
+- name: "install kibana"
+  hosts: kibana
+  become: true
+  become_method: sudo
+  roles:
+  - kibana
+
+- name: "install filebeat"
+  hosts: webservers
+  become: true
+  become_method: sudo
+  roles:
+  - filebeat
+
+...
+
+
