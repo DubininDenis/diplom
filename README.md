@@ -118,15 +118,15 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/output.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/output.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/vm.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/vm.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/subnet.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/subnet.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/security-group.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/security-group.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/network-map.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/network-map.png)
 
 </details>
 
@@ -141,7 +141,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/ansible-ping.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/ansible-ping.png)
 
 </details>
 
@@ -150,19 +150,19 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/target-group.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/target-group.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/backend-group.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/backend-group.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/http-router.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/http-router.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/balanser.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/balanser.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/balanser-curl.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/balanser-curl.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/balanser1.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/balanser1.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/balanser2.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/balanser2.png)
 
 </details>
 
@@ -171,17 +171,17 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/zabbix1.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/zabbix1.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/zabbix2.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/zabbix2.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/zabbix3.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/zabbix3.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/zabbix4.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/zabbix4.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/zabbix5.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/zabbix5.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/zabbix6.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/zabbix6.png)
 
 </details>
 
@@ -190,7 +190,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/elastic.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/elastic.png)
 
 </details>
 
@@ -199,11 +199,11 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/kibana1.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/kibana1.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/kibana2.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/kibana2.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/kibana3.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/kibana3.png)
 
 </details>
 
@@ -212,7 +212,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
    
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/snapshot.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/snapshot.png)
 
 </details>
 
@@ -221,9 +221,9 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <details>
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/security-group-balanser.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/security-group-balanser.png)
 
-![image](https://github.com/DubininDenis/diplom/screens/blob/main/security-group-webservers.png)
+![image](https://github.com/DubininDenis/diplom/blob/main/screens/security-group-webservers.png)
 
 </details>
 
